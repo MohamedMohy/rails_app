@@ -1,0 +1,8 @@
+enter department data
+<%= simple_form_for @department do |f| -%>
+  department_id = <%= f.text_field :department_id %> <br>
+  department_name = <%= f.text_field :department_name %> <br>
+  department_desc = <%= f.text_field :department_desc %> <br>
+  <%= f.submit %>
+  <%end%>
+  <hr>
