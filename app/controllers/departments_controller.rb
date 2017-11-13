@@ -7,9 +7,8 @@ class DepartmentsController < ApplicationController
   def create
     connection = ActiveRecord::Base.connection
       @department =Department.new(department_params)
-      query = "INSERT INTO departments 
-      (department_id,department_name,department_desc) VALUES 
-      ('#{@department.department_id}','#{@department.department_name}','#{@department.department_desc}');"
+      query = "INSERT INTO departments (DEPARTMENT_NAME,DEPARTMENT_DESC) VALUES 
+      ('#{@department.DEPARTMENT_NAME}','#{@department.DEPARTMENT_DESC}');"
       connection.execute(query)
       redirect_to action: "index"
   end
@@ -31,6 +30,6 @@ class DepartmentsController < ApplicationController
   end
 
   def department_params
-     params.require(:department).permit(:department_id,:department_name,:department_desc)
+     params.require(:department).permit(:DEPARTMENT_NAME,:DEPARTMENT_DESC)
   end
 end

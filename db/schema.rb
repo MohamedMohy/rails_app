@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171027192918) do
+ActiveRecord::Schema.define(version: 20171113143416) do
 
   create_table "courses", primary_key: "COURSE_ID", id: :integer, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "COURSE_NAME", limit: 40, null: false
@@ -21,18 +21,20 @@ ActiveRecord::Schema.define(version: 20171027192918) do
     t.index ["Department_ID"], name: "Department_ID"
   end
 
-  create_table "departments", primary_key: "department_id", id: :integer, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string "department_name", limit: 30, null: false
-    t.text "department_desc", null: false
+  create_table "departments", primary_key: "department_id", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "DEPARTMENT_NAME", limit: 50, null: false
+    t.text "DEPARTMENT_DESC", null: false
   end
 
   create_table "students", primary_key: "STUDENT_ID", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.string "USERNAME", limit: 40, null: false
     t.text "PASSWORD", null: false
-    t.string "EMAIL", limit: 50, null: false
-    t.date "REGDATE", null: false
-    t.integer "Department_ID", null: false
+    t.date "REGDATE"
+    t.integer "Department_ID"
+    t.string "USERNAME"
+    t.string "EMAIL"
     t.index ["Department_ID"], name: "Department_ID"
+    t.index ["EMAIL"], name: "index_students_on_EMAIL", unique: true
+    t.index ["USERNAME"], name: "index_students_on_USERNAME", unique: true
   end
 
   add_foreign_key "courses", "departments", column: "Department_ID", primary_key: "department_id", name: "courses_ibfk_1"
