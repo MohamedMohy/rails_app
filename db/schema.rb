@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171113143416) do
+ActiveRecord::Schema.define(version: 20171115114043) do
 
   create_table "courses", primary_key: "COURSE_ID", id: :integer, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "COURSE_NAME", limit: 40, null: false
@@ -27,11 +27,13 @@ ActiveRecord::Schema.define(version: 20171113143416) do
   end
 
   create_table "students", primary_key: "STUDENT_ID", id: :integer, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
-    t.text "PASSWORD", null: false
     t.date "REGDATE"
     t.integer "Department_ID"
     t.string "USERNAME"
     t.string "EMAIL"
+    t.string "password_hash"
+    t.string "password_salt"
+    t.string "PASSWORD"
     t.index ["Department_ID"], name: "Department_ID"
     t.index ["EMAIL"], name: "index_students_on_EMAIL", unique: true
     t.index ["USERNAME"], name: "index_students_on_USERNAME", unique: true

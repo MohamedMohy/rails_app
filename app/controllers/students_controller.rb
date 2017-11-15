@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+    # before_filter :save_login_state, :only => [:new, :create]
     before_action :set_student, only: [:show, :edit, :update, :destroy]
     def new
         @student = Student.new
@@ -13,10 +14,10 @@ class StudentsController < ApplicationController
         begin
             connection.execute(query)
         rescue => exception
-            # redirect_to action: "index"
+            #redirect_to action: "index"
             flash[:notice] = "Duplicate USERNAME or EMAIL !!"
         end
-        # redirect_to action: "index"
+        redirect_to action: "index"
     end
 
     def index

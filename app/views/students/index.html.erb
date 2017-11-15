@@ -5,10 +5,10 @@
         <div class="col-xs-8 col-xs-offset-2">
             <div class="well well-lg">
                 <div class="student-title">
-                    <%= link_to student[4], student_path(student)%>
+                    <%= link_to student[3], student_path(student)%>
                 </div>
 
-                <%= truncate(student[5],length:100) %>
+                <%= truncate(student[4],length:100) %>
             </div>
             <div class="article-actions">
                 <%= link_to 'Edit this student', edit_student_path(student) ,class:"btn btn-xs btn-primary" %> |
