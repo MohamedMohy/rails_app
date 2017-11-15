@@ -20,6 +20,12 @@ class StudentsController < ApplicationController
         redirect_to action: "index"
     end
 
+    def show 
+    end
+
+    def update 
+    end
+
     def index
         query = "SELECT * FROM students"
         @students= ActiveRecord::Base.connection.query(query)
@@ -28,7 +34,7 @@ class StudentsController < ApplicationController
 
     def set_student
         @student = Student.find(params[:id])
-      end
+    end
 
     def student_params
         params.require(:student).permit(:USERNAME,:PASSWORD,:EMAIL)

@@ -17,8 +17,14 @@
             <li><a href="/courses">Courses</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/students/new">Signup</a></li>
-            <li><a href="/sessions/new">Login</a></li>
+            <% if !logged_in? %>
+              <li><a href="/students/new">Signup</a></li>
+              <li><a href="/sessions/new">Login</a></li>
+            <% end %>
+            <% if logged_in? %>
+              <li> <%= link_to 'Logout', log_out_path, method: :delete %></li>
+              <% end %>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
