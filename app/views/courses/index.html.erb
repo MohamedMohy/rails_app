@@ -1,0 +1,23 @@
+<h1 align="center">Listing all Courses</h1>
+
+<% @course.each do |course| %>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2">
+            <div class="well well-lg">
+                <div class="course-title">
+                    <%= link_to course[1], course_path(course)%>
+                </div>
+                <%= truncate(course[2],length:100) %> <br>
+                Instructor is : <%= truncate(course[3],length:100) %> <br>
+                 Number of credit hours => <%= course[4] %>
+            </div>
+            <div class="article-actions">
+                <%= link_to 'Edit this course', edit_course_path(course) ,class:"btn btn-xs btn-primary" %> |
+                    <%= link_to 'Delete this course',course_path(course),method: :delete,
+                           data: { confirm: "Are you sure ?"},class:"btn btn-xs btn-danger"  %>
+            </div>
+        </div>
+    </div>
+    <br> 
+    <% end %>
+        <%= link_to 'Add course', new_course_path %>

@@ -13969,3 +13969,2951 @@ Processing by StudentsController#new as HTML
 Completed 200 OK in 38ms (Views: 36.6ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-11-16 00:07:04 +0200
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (97.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 862ms (Views: 820.3ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 00:07:07 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 40.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 00:07:10 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wcILU4Tu8EjXq1e2uPosgvMWgvEtwJ4QsowsvRJ8DJvFx5RQRGZLpiV2jILDzh8WLWQosqrCH8b7Xtgl0RE/SQ==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 107ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 00:07:11 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (16.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for [1, "mohsda", "asdnaosdnaosdno"]:Array):
+    22:                                     </tr>
+    23:                                     <%= @departments.each do |student| %>
+    24:                                       <tr>
+    25:                                         <td><%= student.name %></td>
+    26:                                       </tr>
+    27:                                     <% end %>
+    28:                                   </table>
+  
+app/views/students/show.html.erb:25:in `block in _app_views_students_show_html_erb___2955827542306969412_70220039265000'
+app/views/students/show.html.erb:23:in `each'
+app/views/students/show.html.erb:23:in `_app_views_students_show_html_erb___2955827542306969412_70220039265000'
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 00:07:41 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `DEPARTMENT_NAME' for [1, "mohsda", "asdnaosdnaosdno"]:Array):
+    22:                                     </tr>
+    23:                                     <%= @departments.each do |student| %>
+    24:                                       <tr>
+    25:                                         <td><%= student.DEPARTMENT_NAME %></td>
+    26:                                       </tr>
+    27:                                     <% end %>
+    28:                                   </table>
+  
+app/views/students/show.html.erb:25:in `block in _app_views_students_show_html_erb___2955827542306969412_70220046380740'
+app/views/students/show.html.erb:23:in `each'
+app/views/students/show.html.erb:23:in `_app_views_students_show_html_erb___2955827542306969412_70220046380740'
+Started GET "/" for 127.0.0.1 at 2017-11-16 00:08:32 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (2.8ms)
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 37ms (Views: 35.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departments" for 127.0.0.1 at 2017-11-16 00:08:34 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (1.3ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 58ms (Views: 42.5ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/log_out" for 127.0.0.1 at 2017-11-16 00:09:00 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"yX0i6kzqBKI0tQaQI+bp2f9pwvT5c+cono0Y7hMOuu+Q5dDXq0ggHKDTQucaAWEGcODLA9Sh985rxZR9TwaxLA=="}
+Redirected to http://localhost:3001/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-16 00:09:00 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 00:09:01 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 00:09:03 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JgqDq6s/2DYNKkH8PiOcGyvTjKAsZ5ZDcuAFPtXJS4IiDxyoa7dj2P/3mshFF6+P9aEm46tlF5U7MvGmFqR4UA==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 00:09:03 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `DEPARTMENT_NAME' for [1, "mohsda", "asdnaosdnaosdno"]:Array):
+    22:                                     </tr>
+    23:                                     <%= @departments.each do |student| %>
+    24:                                       <tr>
+    25:                                         <td><%= student.DEPARTMENT_NAME %></td>
+    26:                                       </tr>
+    27:                                     <% end %>
+    28:                                   </table>
+  
+app/views/students/show.html.erb:25:in `block in _app_views_students_show_html_erb___2955827542306969412_70220042772020'
+app/views/students/show.html.erb:23:in `each'
+app/views/students/show.html.erb:23:in `_app_views_students_show_html_erb___2955827542306969412_70220042772020'
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 00:09:55 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 00:10:47 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.9ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 00:10:48 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 00:10:51 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"glfSxehIaVuJMDA97GRBqvyrXYfdmUmp6KQ3hzNbSpTbzyD4D+pN5R1WdErVg8l1cyJUcPBLWU8d7LsUb1NBVw==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 00:10:51 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.8ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 00:11:18 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 37ms (Views: 34.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 00:11:19 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 31ms (Views: 24.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 00:11:38 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (2.3ms)
+Completed 200 OK in 39ms (Views: 33.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:16:27 +0200
+  [1m[35m (41.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 1177ms (Views: 1076.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 18:21:20 +0200
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  
+Started GET "/s" for 127.0.0.1 at 2017-11-16 18:21:30 +0200
+SyntaxError (/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+    end 
+       ^
+/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/s"):
+app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:22:02 +0200
+  
+SyntaxError (/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+    end 
+       ^
+/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 18:22:04 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 18:22:06 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/departments" for 127.0.0.1 at 2017-11-16 18:22:07 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 67ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 18:22:08 +0200
+  
+SyntaxError (/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+    end 
+       ^
+/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/departments" for 127.0.0.1 at 2017-11-16 18:22:12 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 38ms (Views: 36.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students/change_dep_id" for 127.0.0.1 at 2017-11-16 18:23:08 +0200
+  
+SyntaxError (/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+    end 
+       ^
+/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 18:24:34 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 32ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 18:24:37 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZUyy8MUnD19ZVmnare+dpnNtNek1eBh9vjEd9PYXfuX3chKKu1wv5NeXQzheGW7nrcch7H2IPABLqJmE4on22Q==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:24:37 +0200
+  
+SyntaxError (/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+    end 
+       ^
+/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:24:50 +0200
+  
+SyntaxError (/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+    end 
+       ^
+/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:24:51 +0200
+  
+SyntaxError (/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+    end 
+       ^
+/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/students_controller.rb:30: syntax error, unexpected keyword_end
+app/controllers/students_controller.rb:58: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:24:55 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.0ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (3.0ms)
+Completed 200 OK in 63ms (Views: 43.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:25:37 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (3.3ms)
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:25:38 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.9ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:25:39 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:25:39 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:25:39 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:26:13 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:26:41 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.6ms)
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (2.7ms)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:26:42 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.9ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 36ms (Views: 32.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:27:00 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.5ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.9ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:27:01 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:27:01 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.7ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 31ms (Views: 26.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:28:08 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (141.8ms)
+Completed 500 Internal Server Error in 146ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `students_change_dep_id_path' for #<#<Class:0x007fb0a51f7e78>:0x007fb0a49e4948>):
+    16:                                 <i class="glyphicon glyphicon-gift"></i><%=@student.REGDATE%></p>
+    17:                             <!-- Split button -->
+    18:                                 <% @departments.each do |s| %>   
+    19:                                     <%=link_to "#{s[1]}", students_change_dep_id_path(foo_param: s[0]) %>
+    20:                                 <% end %>
+    21:                             <div class="btn-group">
+    22:                                 
+  
+app/views/students/show.html.erb:19:in `block in _app_views_students_show_html_erb__1920259600956998572_70198326430040'
+app/views/students/show.html.erb:18:in `each'
+app/views/students/show.html.erb:18:in `_app_views_students_show_html_erb__1920259600956998572_70198326430040'
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 18:29:31 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"slDWoDg++Xut5SmPr+KmVjN4t9QZLehTQ5o/eVBdlnOFRhucC1ifyeq4/C4nxNktz1i8MMNrDG8RIbCMepxE7Q==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:29:31 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (181.7ms)
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `students_change_dep_id_path' for #<#<Class:0x007fb0a51f7e78>:0x007fb0a5e0d258>):
+    16:                                 <i class="glyphicon glyphicon-gift"></i><%=@student.REGDATE%></p>
+    17:                             <!-- Split button -->
+    18:                                 <% @departments.each do |s| %>   
+    19:                                     <%=link_to "#{s[1]}", students_change_dep_id_path(foo_param: s[0]) %>
+    20:                                 <% end %>
+    21:                             <div class="btn-group">
+    22:                                 
+  
+app/views/students/show.html.erb:19:in `block in _app_views_students_show_html_erb__1920259600956998572_70198336974460'
+app/views/students/show.html.erb:18:in `each'
+app/views/students/show.html.erb:18:in `_app_views_students_show_html_erb__1920259600956998572_70198336974460'
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:31:53 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (132.9ms)
+Completed 500 Internal Server Error in 149ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `students_change_dep_id_path' for #<#<Class:0x007fb0a56f2518>:0x007fb0a56e8b08>):
+    16:                                 <i class="glyphicon glyphicon-gift"></i><%=@student.REGDATE%></p>
+    17:                             <!-- Split button -->
+    18:                                 <% @departments.each do |s| %>   
+    19:                                     <%=link_to "#{s[1]}", students_change_dep_id_path(foo_param: s[0]) %>
+    20:                                 <% end %>
+    21:                             <div class="btn-group">
+    22:                                 
+  
+app/views/students/show.html.erb:19:in `block in _app_views_students_show_html_erb__1920259600956998572_70198333250840'
+app/views/students/show.html.erb:18:in `each'
+app/views/students/show.html.erb:18:in `_app_views_students_show_html_erb__1920259600956998572_70198333250840'
+Started GET "/st" for 127.0.0.1 at 2017-11-16 18:31:57 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/st"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 18:32:03 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"slDWoDg++Xut5SmPr+KmVjN4t9QZLehTQ5o/eVBdlnOFRhucC1ifyeq4/C4nxNktz1i8MMNrDG8RIbCMepxE7Q==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:32:03 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (123.0ms)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `students_change_dep_id_path' for #<#<Class:0x007fb0a56f2518>:0x007fb0ac1a6a30>):
+    16:                                 <i class="glyphicon glyphicon-gift"></i><%=@student.REGDATE%></p>
+    17:                             <!-- Split button -->
+    18:                                 <% @departments.each do |s| %>   
+    19:                                     <%=link_to "#{s[1]}", students_change_dep_id_path(foo_param: s[0]) %>
+    20:                                 <% end %>
+    21:                             <div class="btn-group">
+    22:                                 
+  
+app/views/students/show.html.erb:19:in `block in _app_views_students_show_html_erb__1920259600956998572_70198389193260'
+app/views/students/show.html.erb:18:in `each'
+app/views/students/show.html.erb:18:in `_app_views_students_show_html_erb__1920259600956998572_70198389193260'
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 18:32:52 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"slDWoDg++Xut5SmPr+KmVjN4t9QZLehTQ5o/eVBdlnOFRhucC1ifyeq4/C4nxNktz1i8MMNrDG8RIbCMepxE7Q==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:32:52 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (2.7ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.4ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 44ms (Views: 36.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/students/change_dep_id?foo_param=2" for 127.0.0.1 at 2017-11-16 18:32:55 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"2"}
+Completed 406 Not Acceptable in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StudentsController#change_dep_id is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:33:00 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.9ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:42:23 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.8ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:42:35 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.8ms)
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (2.8ms)
+Completed 200 OK in 41ms (Views: 38.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:45:33 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mohamed/kolya/rails_app/app/assets/config
+  /home/mohamed/kolya/rails_app/app/assets/images
+  /home/mohamed/kolya/rails_app/app/assets/javascripts
+  /home/mohamed/kolya/rails_app/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap_form-2.7.0/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /home/mohamed/kolya/rails_app/node_modules
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/images
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/popper_js-1.12.5/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:18
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3629314014510194292_70198257141900'
+Started GET "/students/" for 127.0.0.1 at 2017-11-16 18:46:00 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mohamed/kolya/rails_app/app/assets/config
+  /home/mohamed/kolya/rails_app/app/assets/images
+  /home/mohamed/kolya/rails_app/app/assets/javascripts
+  /home/mohamed/kolya/rails_app/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap_form-2.7.0/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /home/mohamed/kolya/rails_app/node_modules
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/images
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/popper_js-1.12.5/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:18
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb__3629314014510194292_70198388856600'
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 18:46:09 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"slDWoDg++Xut5SmPr+KmVjN4t9QZLehTQ5o/eVBdlnOFRhucC1ifyeq4/C4nxNktz1i8MMNrDG8RIbCMepxE7Q==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:46:09 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.3ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 152ms (Views: 148.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:47:36 +0200
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (3.3ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 342ms (Views: 309.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:48:26 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mohamed/kolya/rails_app/app/assets/config
+  /home/mohamed/kolya/rails_app/app/assets/images
+  /home/mohamed/kolya/rails_app/app/assets/javascripts
+  /home/mohamed/kolya/rails_app/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap_form-2.7.0/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /home/mohamed/kolya/rails_app/node_modules
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/images
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/popper_js-1.12.5/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___199066567837147354_70126514821680'
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:53:00 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (The asset "default.js" is not present in the asset pipeline.):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag :default, "data-turbolinks-track" => true %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___199066567837147354_70126434145020'
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:53:02 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 1.3ms)
+
+
+  
+ActionView::Template::Error (The asset "default.js" is not present in the asset pipeline.):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag :default, "data-turbolinks-track" => true %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___199066567837147354_70126585163220'
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 18:53:08 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (The asset "default.js" is not present in the asset pipeline.):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag :default, "data-turbolinks-track" => true %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___199066567837147354_70126516530140'
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 18:53:21 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mohamed/kolya/rails_app/app/assets/config
+  /home/mohamed/kolya/rails_app/app/assets/images
+  /home/mohamed/kolya/rails_app/app/assets/javascripts
+  /home/mohamed/kolya/rails_app/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap_form-2.7.0/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /home/mohamed/kolya/rails_app/node_modules
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/images
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/popper_js-1.12.5/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___199066567837147354_70126584184080'
+Started GET "/" for 127.0.0.1 at 2017-11-16 18:55:47 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (74.5ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mohamed/kolya/rails_app/app/assets/config
+  /home/mohamed/kolya/rails_app/app/assets/images
+  /home/mohamed/kolya/rails_app/app/assets/javascripts
+  /home/mohamed/kolya/rails_app/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap_form-2.7.0/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /home/mohamed/kolya/rails_app/node_modules
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/images
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/popper_js-1.12.5/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___199066567837147354_70126428391580'
+Started GET "/" for 127.0.0.1 at 2017-11-16 18:55:47 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (couldn't find file 'jquery' with type 'application/javascript'
+Checked in these paths: 
+  /home/mohamed/kolya/rails_app/app/assets/config
+  /home/mohamed/kolya/rails_app/app/assets/images
+  /home/mohamed/kolya/rails_app/app/assets/javascripts
+  /home/mohamed/kolya/rails_app/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap_form-2.7.0/app/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actioncable-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/actionview-5.1.4/lib/assets/compiled
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts
+  /home/mohamed/kolya/rails_app/node_modules
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/fonts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/images
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/stylesheets
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/bootstrap-sass-3.3.7/assets/javascripts
+  /home/mohamed/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/popper_js-1.12.5/assets/javascripts):
+     5:     <%= csrf_meta_tags %>
+     6: 
+     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+     9:   </head>
+    10: 
+    11:   <body>
+  
+app/assets/javascripts/application.js:13
+app/views/layouts/application.html.erb:8:in `_app_views_layouts_application_html_erb___199066567837147354_70126433815920'
+Started GET "/" for 127.0.0.1 at 2017-11-16 18:56:02 +0200
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (14.8ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (4.9ms)
+Completed 200 OK in 3640ms (Views: 3613.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 18:56:11 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.1ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/log_out" for 127.0.0.1 at 2017-11-16 18:56:13 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"LobDHm8a1RfPlBn60sEoFO0c50cIl26tHD3xveKpMw8ZkA4iXHyzpYjJzFta51dvETzso9LRipFOhn5IyGjhkQ=="}
+Redirected to http://localhost:3001/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-16 18:56:13 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 61ms (Views: 60.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 18:56:14 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 18:56:16 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CV2WwhNLSe3/lex1Ofkir4z0oXACQXCj5EHglqq/opo+S1v+IC0vX7jIOdSx313UcNSqlNgHlJ+2+m9jgH5wBA==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 4ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:56:16 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.6ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (2.3ms)
+Completed 200 OK in 72ms (Views: 67.8ms | ActiveRecord: 1.2ms)
+
+
+Started DELETE "/log_out" for 127.0.0.1 at 2017-11-16 18:56:22 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"h9VEgVvJ6X3I4MsGgC7agOL4Pq6mzohhekToDC+m1dWww4m9aK+Pz4+9HqcICKX7Htg1SnyIbF0o/2f5BWcHSw=="}
+Redirected to http://localhost:3001/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-16 18:56:22 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 18:56:24 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 18:56:25 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SN1ZFsNaFh4ZOYV6jeczfRmqujs+mHA22oUImG8kpuJ/y5Qq8DxwrF5kUNsFwUwG5Yqx3+TelAqIPodtReV0fA==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:56:25 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.1ms)
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (2.6ms)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/students/change_dep_id?foo_param=1" for 127.0.0.1 at 2017-11-16 18:56:41 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"1"}
+Completed 406 Not Acceptable in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StudentsController#change_dep_id is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:56:45 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (1.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.9ms)
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (3.0ms)
+Completed 200 OK in 42ms (Views: 35.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 18:57:17 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.6ms)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/students/change_dep_id?foo_param=2" for 127.0.0.1 at 2017-11-16 18:57:37 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"2"}
+Completed 406 Not Acceptable in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (StudentsController#change_dep_id is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/students/change_dep_id?foo_param=1" for 127.0.0.1 at 2017-11-16 19:01:13 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"1"}
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 1 LIMIT 1[0m
+Completed 406 Not Acceptable in 63ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionController::UnknownFormat (StudentsController#change_dep_id is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/students/change_dep_id?foo_param=1" for 127.0.0.1 at 2017-11-16 19:02:01 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"1"}
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 1 LIMIT 1[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `USERNAME' for nil:NilClass):
+     7:                             <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+     8:                         </div>
+     9:                         <div class="col-sm-6 col-md-8">
+    10:                             <h4><%=@student.USERNAME%></h4>
+    11:                             <small><cite title="San Francisco, USA">San Francisco, USA <i class="glyphicon glyphicon-map-marker">
+    12:                             </i></cite></small>
+    13:                             <p>
+  
+app/views/students/show.html.erb:10:in `_app_views_students_show_html_erb__1556606382041800240_70092901575100'
+app/controllers/students_controller.rb:30:in `change_dep_id'
+Started GET "/students/change_dep_id?foo_param=1" for 127.0.0.1 at 2017-11-16 19:02:21 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"1"}
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 1 LIMIT 1[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1 align="center">Listing all Students</h1>
+    2: 
+    3: <% @students.each do |student| %>
+    4:     <div class="row">
+    5:         <div class="col-xs-8 col-xs-offset-2">
+    6:             <div class="well well-lg">
+  
+app/views/students/index.html.erb:3:in `_app_views_students_index_html_erb__1411483865333357899_70092811883100'
+app/controllers/students_controller.rb:30:in `change_dep_id'
+Started GET "/students/change_dep_id?foo_param=1" for 127.0.0.1 at 2017-11-16 19:02:25 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"1"}
+  [1m[36mDepartment Load (0.8ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 1 LIMIT 1[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1 align="center">Listing all Students</h1>
+    2: 
+    3: <% @students.each do |student| %>
+    4:     <div class="row">
+    5:         <div class="col-xs-8 col-xs-offset-2">
+    6:             <div class="well well-lg">
+  
+app/views/students/index.html.erb:3:in `_app_views_students_index_html_erb__1411483865333357899_70092804674980'
+app/controllers/students_controller.rb:30:in `change_dep_id'
+Started POST "/__web_console/repl_sessions/3313feb7f3dfcaf2eaf022382cc07080/trace" for 127.0.0.1 at 2017-11-16 19:02:48 +0200
+Started POST "/__web_console/repl_sessions/3313feb7f3dfcaf2eaf022382cc07080/trace" for 127.0.0.1 at 2017-11-16 19:02:49 +0200
+Started GET "/students/change_dep_id?foo_param=1" for 127.0.0.1 at 2017-11-16 19:03:12 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"1"}
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 1 LIMIT 1[0m
+Redirected to http://localhost:3001/students
+Completed 302 Found in 17ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 19:03:12 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (3.2ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (16.9ms)
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/log_out" for 127.0.0.1 at 2017-11-16 19:09:59 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"4RcVLli2cIa8P9hS7YldJh3oIFWUtVycsb4lJeHSNSvWAdgSa9AWNPtiDfNlryJd4cgrsU7zuKDjBarQyxPntQ=="}
+Redirected to http://localhost:3001/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-16 19:09:59 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 40.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 19:10:00 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 19:10:01 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YFqQboxwVY/FvujnP66l4MaP1P3kGKOzKmuulWf6GqBXTF1SvxYzPYLjPUa3iNqbOq/fGT5eR4940CFgTTvIPg==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 19:10:01 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (2.2ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.5ms)
+Completed 200 OK in 38ms (Views: 33.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/students/change_dep_id?foo_param=1&stud_param=1" for 127.0.0.1 at 2017-11-16 19:10:03 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"1", "stud_param"=>"1"}
+  [1m[36mDepartment Load (0.5ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 1 LIMIT 1[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+Redirected to http://localhost:3001/students
+Completed 302 Found in 21ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 19:10:03 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.2ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (2.1ms)
+Completed 200 OK in 32ms (Views: 30.0ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/log_out" for 127.0.0.1 at 2017-11-16 19:15:11 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"VDlqkz+rbIUHxx5aAxYtLxbQcartnGVh38YMjPe7ZXNjL6evDM0KN0Cay/uLMFJU6vB6TjfagV2NfYN53Xq37Q=="}
+Redirected to http://localhost:3001/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-16 19:15:11 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 29.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/sessions/new" for 127.0.0.1 at 2017-11-16 19:15:12 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 33ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2017-11-16 19:15:14 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uXcrPisn49sxrAIou28PEGKJ6TXAAn0O9V1+NU4MNcWOYeYCGEGFaXbx14kzSXBrnqni0RpEmTKn5vHAZM3nWw==", "USERNAME"=>"mohamed", "PASSWORD"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`USERNAME` = 'mohamed' LIMIT 1[0m
+Redirected to http://localhost:3001/students/1
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/students/1" for 127.0.0.1 at 2017-11-16 19:15:14 +0200
+Processing by StudentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (0.8ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/students/change_dep_id?foo_param=1&stud_param=1" for 127.0.0.1 at 2017-11-16 19:15:15 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"1", "stud_param"=>"1"}
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 1 LIMIT 1[0m
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (22.8ms)[0m  [1m[33mUPDATE students SET Departmet_ID = 1 WHERE STUDENT_ID = '1';[0m
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 25.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Unknown column 'Departmet_ID' in 'field list': UPDATE students SET Departmet_ID = 1 WHERE STUDENT_ID = '1';):
+  
+app/controllers/students_controller.rb:33:in `change_dep_id'
+Started GET "/students/change_dep_id?foo_param=1&stud_param=1" for 127.0.0.1 at 2017-11-16 19:15:32 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"1", "stud_param"=>"1"}
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 1 LIMIT 1[0m
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (67.9ms)[0m  [1m[33mUPDATE students SET Department_ID = 1 WHERE STUDENT_ID = '1';[0m
+Redirected to http://localhost:3001/students
+Completed 302 Found in 92ms (ActiveRecord: 70.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 19:15:32 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.1ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.8ms)
+Completed 200 OK in 35ms (Views: 31.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students/1%2F2017-11-15%2F1%2Fmohamed%2Fmohamedmohy217@gmail.com%2F1234567" for 127.0.0.1 at 2017-11-16 19:18:56 +0200
+Processing by StudentsController#show as 
+  Parameters: {"id"=>"1/2017-11-15/1/mohamed/mohamedmohy217@gmail"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (2.0ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 49ms (Views: 43.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/students/2%2F2017-11-15%2F%2Fnsaifiasbfiabsfi%2Fnsdfasdf@gmail.com%2F12345678" for 127.0.0.1 at 2017-11-16 19:18:59 +0200
+Processing by StudentsController#show as 
+  Parameters: {"id"=>"2/2017-11-15//nsaifiasbfiabsfi/nsdfasdf@gmail"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.9ms)
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (2.8ms)
+Completed 200 OK in 68ms (Views: 59.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/students/1%2F2017-11-15%2F1%2Fmohamed%2Fmohamedmohy217@gmail.com%2F1234567" for 127.0.0.1 at 2017-11-16 19:19:17 +0200
+Processing by StudentsController#show as 
+  Parameters: {"id"=>"1/2017-11-15/1/mohamed/mohamedmohy217@gmail"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.5ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/students/1%2F2017-11-15%2F1%2Fmohamed%2Fmohamedmohy217@gmail.com%2F1234567" for 127.0.0.1 at 2017-11-16 19:19:27 +0200
+Processing by StudentsController#show as 
+  Parameters: {"id"=>"1/2017-11-15/1/mohamed/mohamedmohy217@gmail"}
+  [1m[36mStudent Load (1.2ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.3ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 46ms (Views: 39.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/departments" for 127.0.0.1 at 2017-11-16 19:19:41 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (1.2ms)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  Rendered layouts/_navigation.html.erb (1.4ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 19:19:47 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/courses"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started DELETE "/log_out" for 127.0.0.1 at 2017-11-16 19:25:38 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"cywD2DFFwqrOIZXPaYk3LYiIm9lv8dZtx/lutWXolXlEOs7kAiOkGIl8QG7hr0hWdKiQPbW3MlGVQuFATylH5w=="}
+Redirected to http://localhost:3001/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-16 19:25:38 +0200
+  
+SyntaxError (/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:26: syntax error, unexpected '{', expecting keyword_end
+URSES WHERE Department_ID = '{@student.Department_ID}';'
+                              ^
+/home/mohamed/kolya/rails_app/app/controllers/students_controller.rb:26: syntax error, unexpected '}', expecting keyword_end
+ID = '{@student.Department_ID}';'
+                              ^):
+  
+app/controllers/students_controller.rb:26: syntax error, unexpected '{', expecting keyword_end
+app/controllers/students_controller.rb:26: syntax error, unexpected '}', expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-11-16 19:51:27 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 29.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 19:51:29 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/courses"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 19:52:21 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (35.1ms)[0m  [1m[34mSELECT * FROM courses[0m
+Completed 406 Not Acceptable in 45ms (ActiveRecord: 35.1ms)
+
+
+  
+ActionController::UnknownFormat (CoursesController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 19:52:42 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (0.4ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 19:53:48 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1 align="center">Listing all Courses</h1>
+    2: 
+    3: <% @course.each do |student| %>
+    4:     <div class="row">
+    5:         <div class="col-xs-8 col-xs-offset-2">
+    6:             <div class="well well-lg">
+  
+app/views/courses/index.html.erb:3:in `_app_views_courses_index_html_erb___2119850426899012374_70092812828760'
+Started GET "/students" for 127.0.0.1 at 2017-11-16 19:55:08 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/departments" for 127.0.0.1 at 2017-11-16 19:55:09 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 44ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 19:55:10 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 19:55:10 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <h1 align="center">Listing all Courses</h1>
+    2: 
+    3: <% @course.each do |student| %>
+    4:     <div class="row">
+    5:         <div class="col-xs-8 col-xs-offset-2">
+    6:             <div class="well well-lg">
+  
+app/views/courses/index.html.erb:3:in `_app_views_courses_index_html_erb___2119850426899012374_70092903906040'
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 19:55:44 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2017-11-16 19:55:46 +0200
+Processing by CoursesController#new as HTML
+Completed 406 Not Acceptable in 26ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionController::UnknownFormat (CoursesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/courses/new" for 127.0.0.1 at 2017-11-16 20:11:55 +0200
+Processing by CoursesController#new as HTML
+Completed 406 Not Acceptable in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (CoursesController#new is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.1.4) lib/action_controller/metal/implicit_render.rb:53:in `default_render'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.1.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:186:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.1.4) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.1.4) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `block in instrument'
+activesupport (5.1.4) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.1.4) lib/active_support/notifications.rb:166:in `instrument'
+actionpack (5.1.4) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.1.4) lib/action_controller/metal/params_wrapper.rb:252:in `process_action'
+activerecord (5.1.4) lib/active_record/railties/controller_runtime.rb:22:in `process_action'
+actionpack (5.1.4) lib/abstract_controller/base.rb:124:in `process'
+actionview (5.1.4) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
+actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `each'
+actionpack (5.1.4) lib/action_dispatch/journey/router.rb:33:in `serve'
+actionpack (5.1.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.0.3) lib/rack/etag.rb:25:in `call'
+rack (2.0.3) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.3) lib/rack/head.rb:12:in `call'
+rack (2.0.3) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.3) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.1.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:26:in `block in call'
+activesupport (5.1.4) lib/active_support/callbacks.rb:97:in `run_callbacks'
+actionpack (5.1.4) lib/action_dispatch/middleware/callbacks.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:59:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.10.0) lib/puma/configuration.rb:225:in `call'
+puma (3.10.0) lib/puma/server.rb:605:in `handle_request'
+puma (3.10.0) lib/puma/server.rb:437:in `process_client'
+puma (3.10.0) lib/puma/server.rb:301:in `block in run'
+puma (3.10.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/courses/new" for 127.0.0.1 at 2017-11-16 20:18:28 +0200
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (28.7ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2017-11-16 20:19:11 +0200
+Processing by CoursesController#new as HTML
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2017-11-16 20:19:27 +0200
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"auDUnYOuB7U4THNqtUuvP753CoihOHktrYelAAd6jbJd9hmhsMhhB38Rpss9bdBEQlcBbHt+nRH/PCr1LbtfLA==", "course"=>{"COURSE_NAME"=>"database", "COURSE_DESC"=>"bad course", "INSTRUCTOR_NAME"=>"yasser", "CREDIT_HOURS"=>"4"}, "commit"=>"Add Course"}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `Course_NAME' for #<Course:0x007f7f82876528>
+Did you mean?  COURSE_NAME
+               COURSE_NAME?
+               COURSE_NAME=):
+  
+app/controllers/courses_controller.rb:11:in `create'
+Started POST "/courses" for 127.0.0.1 at 2017-11-16 20:19:47 +0200
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"auDUnYOuB7U4THNqtUuvP753CoihOHktrYelAAd6jbJd9hmhsMhhB38Rpss9bdBEQlcBbHt+nRH/PCr1LbtfLA==", "course"=>{"COURSE_NAME"=>"database", "COURSE_DESC"=>"bad course", "INSTRUCTOR_NAME"=>"yasser", "CREDIT_HOURS"=>"4"}, "commit"=>"Add Course"}
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS) VALUES 
+          ('database','bad course','yasser','4');[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::NotNullViolation (Mysql2::Error: Field 'COURSE_ID' doesn't have a default value: INSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS) VALUES 
+          ('database','bad course','yasser','4');):
+  
+app/controllers/courses_controller.rb:12:in `create'
+Started POST "/courses" for 127.0.0.1 at 2017-11-16 20:24:30 +0200
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"auDUnYOuB7U4THNqtUuvP753CoihOHktrYelAAd6jbJd9hmhsMhhB38Rpss9bdBEQlcBbHt+nRH/PCr1LbtfLA==", "course"=>{"COURSE_NAME"=>"database", "COURSE_DESC"=>"bad course", "INSTRUCTOR_NAME"=>"yasser", "CREDIT_HOURS"=>"4"}, "commit"=>"Add Course"}
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS) VALUES 
+          ('database','bad course','yasser','4');[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.1ms)
+
+
+  
+ActiveRecord::NotNullViolation (Mysql2::Error: Field 'Department_ID' doesn't have a default value: INSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS) VALUES 
+          ('database','bad course','yasser','4');):
+  
+app/controllers/courses_controller.rb:12:in `create'
+Started POST "/courses" for 127.0.0.1 at 2017-11-16 20:24:46 +0200
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"auDUnYOuB7U4THNqtUuvP753CoihOHktrYelAAd6jbJd9hmhsMhhB38Rpss9bdBEQlcBbHt+nRH/PCr1LbtfLA==", "course"=>{"COURSE_NAME"=>"database", "COURSE_DESC"=>"bad course", "INSTRUCTOR_NAME"=>"yasser", "CREDIT_HOURS"=>"4"}, "commit"=>"Add Course"}
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS) VALUES 
+          ('database','bad course','yasser','4');[0m
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::NotNullViolation (Mysql2::Error: Field 'Department_ID' doesn't have a default value: INSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS) VALUES 
+          ('database','bad course','yasser','4');):
+  
+app/controllers/courses_controller.rb:12:in `create'
+Started GET "/courses/new" for 127.0.0.1 at 2017-11-16 20:51:13 +0200
+Processing by CoursesController#new as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (28.5ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `Department_id' for #<Course:0x005651013ced50>
+Did you mean?  Department_ID
+               Department_ID?
+               Department_ID=
+               Department_ID_was):
+    78: 
+    79:                 <div class="col-sm-8">
+    80: 
+    81:                     <%= f.number_field :Department_id, class: "form-control", placeholder: "Enter Department id" %>
+    82: 
+    83:                 </div>
+    84: 
+  
+app/views/courses/new.html.erb:81:in `block in _app_views_courses_new_html_erb___255021414686404047_47452957268800'
+app/views/courses/new.html.erb:7:in `_app_views_courses_new_html_erb___255021414686404047_47452957268800'
+Started GET "/courses/new" for 127.0.0.1 at 2017-11-16 20:51:35 +0200
+Processing by CoursesController#new as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 247ms (Views: 245.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2017-11-16 20:52:13 +0200
+Processing by CoursesController#new as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2017-11-16 20:52:38 +0200
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"myBLgrS0QI9pUdMEjX6/ntvvhh4o0XrcRyQwZft5+cysNoa+h9ImPS4MBqUFWMDlJ8+N+vKXnuAVn7+Q0bgrUg==", "course"=>{"COURSE_NAME"=>"database", "COURSE_DESC"=>"bad course", "INSTRUCTOR_NAME"=>"yasser", "CREDIT_HOURS"=>"4", "Department_ID"=>"1"}, "commit"=>"Add Course"}
+Unpermitted parameter: :Department_ID
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS) VALUES 
+          ('database','bad course','yasser','4');[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::NotNullViolation (Mysql2::Error: Field 'Department_ID' doesn't have a default value: INSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS) VALUES 
+          ('database','bad course','yasser','4');):
+  
+app/controllers/courses_controller.rb:14:in `create'
+Started POST "/courses" for 127.0.0.1 at 2017-11-16 20:53:26 +0200
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"myBLgrS0QI9pUdMEjX6/ntvvhh4o0XrcRyQwZft5+cysNoa+h9ImPS4MBqUFWMDlJ8+N+vKXnuAVn7+Q0bgrUg==", "course"=>{"COURSE_NAME"=>"database", "COURSE_DESC"=>"bad course", "INSTRUCTOR_NAME"=>"yasser", "CREDIT_HOURS"=>"4", "Department_ID"=>"1"}, "commit"=>"Add Course"}
+Unpermitted parameter: :Department_ID
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS,Department_ID) VALUES 
+          ('database','bad course','yasser','4','');[0m
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Incorrect integer value: '' for column 'Department_ID' at row 1: INSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS,Department_ID) VALUES 
+          ('database','bad course','yasser','4','');):
+  
+app/controllers/courses_controller.rb:14:in `create'
+Started POST "/courses" for 127.0.0.1 at 2017-11-16 20:56:48 +0200
+Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"myBLgrS0QI9pUdMEjX6/ntvvhh4o0XrcRyQwZft5+cysNoa+h9ImPS4MBqUFWMDlJ8+N+vKXnuAVn7+Q0bgrUg==", "course"=>{"COURSE_NAME"=>"database", "COURSE_DESC"=>"bad course", "INSTRUCTOR_NAME"=>"yasser", "CREDIT_HOURS"=>"4", "Department_ID"=>"1"}, "commit"=>"Add Course"}
+  [1m[35m (83.9ms)[0m  [1m[32mINSERT INTO courses (COURSE_NAME,COURSE_DESC,INSTRUCTOR_NAME,CREDIT_HOURS,Department_ID) VALUES 
+          ('database','bad course','yasser','4','1');[0m
+Redirected to http://localhost:3001/courses
+Completed 302 Found in 104ms (ActiveRecord: 85.0ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 20:56:48 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0..1)):
+     7:                 <div class="course-title">
+     8:                     <%= link_to course[3], course_path(course)%>
+     9:                 </div>
+    10:                 <%= truncate(course[4],length:100) %>
+    11:             </div>
+    12:             <div class="article-actions">
+    13:                 <%= link_to 'Edit this course', edit_course_path(course) ,class:"btn btn-xs btn-primary" %> |
+  
+app/views/courses/index.html.erb:10:in `block in _app_views_courses_index_html_erb___3662505318396495110_69959633651820'
+app/views/courses/index.html.erb:3:in `each'
+app/views/courses/index.html.erb:3:in `_app_views_courses_index_html_erb___3662505318396495110_69959633651820'
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 20:57:34 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 20:57:51 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 20:58:25 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 20:59:09 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 21:00:00 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/departments" for 127.0.0.1 at 2017-11-16 21:00:33 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 42ms (Views: 39.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departments/1%2Fmohsda%2Fasdnaosdnaosdno" for 127.0.0.1 at 2017-11-16 21:00:34 +0200
+Processing by DepartmentsController#show as HTML
+  Parameters: {"id"=>"1/mohsda/asdnaosdnaosdno"}
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 1 LIMIT 1[0m
+  Rendering departments/show.html.erb within layouts/application
+  Rendered departments/show.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 52ms (Views: 33.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 21:24:52 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 21:24:56 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departments" for 127.0.0.1 at 2017-11-16 21:24:57 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/departments/1%2Fmohsda%2Fasdnaosdnaosdno" for 127.0.0.1 at 2017-11-16 21:24:58 +0200
+Processing by DepartmentsController#show as HTML
+  Parameters: {"id"=>"1/mohsda/asdnaosdnaosdno"}
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 1 LIMIT 1[0m
+  Rendering departments/show.html.erb within layouts/application
+  Rendered departments/show.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departments" for 127.0.0.1 at 2017-11-16 21:24:59 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 21:25:00 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 21:25:01 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 21:25:02 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 40ms (Views: 34.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/1%2F2017-11-15%2F1%2Fmohamed%2Fmohamedmohy217@gmail.com%2F1234567" for 127.0.0.1 at 2017-11-16 21:25:03 +0200
+Processing by StudentsController#show as 
+  Parameters: {"id"=>"1/2017-11-15/1/mohamed/mohamedmohy217@gmail"}
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 60ms (Views: 41.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-11-16 21:38:41 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 34.1ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:39:03 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g64hl8+g1eH2omk3g9VJd00VMrvR6DKjxpPVEr26Qbi0uOyr/MazU7H/vJYL8zYMsTU5Xwuu1p+UKFrnl3uTJg==", "student"=>{"USERNAME"=>"baba", "EMAIL"=>"baba@beet.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('baba',HashBytes('SHA1', 0124609090')','baba@beet.com','2017-11-16');[0m
+Redirected to http://localhost:3001/students
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 21:39:03 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 40ms (Views: 37.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-11-16 21:39:40 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 34.0ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:39:49 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+hK5TgFnZhFTqLNxnFThSIWMJi1Fdmdnj8+ENtjqKIfNBHRyMgEAoxT1ZtAUcp4zeawtyZ8wg1vddAvD8iv6GQ==", "student"=>{"USERNAME"=>"baba", "EMAIL"=>"mohamed@gmail.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (85.3ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('baba','1234567','mohamed@gmail.com','2017-11-16');[0m
+Redirected to http://localhost:3001/students
+Completed 302 Found in 113ms (ActiveRecord: 85.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 21:39:49 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_navigation.html.erb (0.7ms)
+Completed 200 OK in 45ms (Views: 43.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/new" for 127.0.0.1 at 2017-11-16 21:40:28 +0200
+Processing by StudentsController#new as HTML
+  Rendering students/new.html.erb within layouts/application
+  Rendered students/new.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 38.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:41:41 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsa", "EMAIL"=>"mohamedmohysd217@gmail.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HashBytes('SHA1', 1234567sadasd)','mohamedmohysd217@gmail.com','2017-11-16');[0m
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHA1', 1234567sadasd)','mohamedmohysd217@gmail.com','2017-11-16')' at line 2: INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HashBytes('SHA1', 1234567sadasd)','mohamedmohysd217@gmail.com','2017-11-16');):
+  
+app/controllers/students_controller.rb:14:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:42:18 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsa", "EMAIL"=>"mohamedmohysd217@gmail.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HashBytes('SHA1', eaaewfasef','mohamedmohysd217@gmail.com','2017-11-16');[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHA1', eaaewfasef','mohamedmohysd217@gmail.com','2017-11-16')' at line 2: INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HashBytes('SHA1', eaaewfasef','mohamedmohysd217@gmail.com','2017-11-16');):
+  
+app/controllers/students_controller.rb:14:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:42:38 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsa", "EMAIL"=>"mohamedmohysd217@gmail.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HashBytes('SHA1', eaaewfasef'),'mohamedmohysd217@gmail.com','2017-11-16');[0m
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHA1', eaaewfasef'),'mohamedmohysd217@gmail.com','2017-11-16')' at line 2: INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HashBytes('SHA1', eaaewfasef'),'mohamedmohysd217@gmail.com','2017-11-16');):
+  
+app/controllers/students_controller.rb:14:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:43:20 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsa", "EMAIL"=>"mohamedmohysd217@gmail.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HashBytes('SHA1', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16');[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHA1', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16')' at line 2: INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HashBytes('SHA1', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16');):
+  
+app/controllers/students_controller.rb:14:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:45:28 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsa", "EMAIL"=>"mohamedmohysd217@gmail.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HASHBYTES('SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16');[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16')' at line 2: INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HASHBYTES('SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16');):
+  
+app/controllers/students_controller.rb:14:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:45:29 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsa", "EMAIL"=>"mohamedmohysd217@gmail.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HASHBYTES('SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16');[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16')' at line 2: INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HASHBYTES('SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16');):
+  
+app/controllers/students_controller.rb:14:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:45:30 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsa", "EMAIL"=>"mohamedmohysd217@gmail.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HASHBYTES('SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16');[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16')' at line 2: INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HASHBYTES('SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16');):
+  
+app/controllers/students_controller.rb:14:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:45:30 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsa", "EMAIL"=>"mohamedmohysd217@gmail.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HASHBYTES('SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16');[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16')' at line 2: INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HASHBYTES('SHA2_512', eaaewfasef),'mohamedmohysd217@gmail.com','2017-11-16');):
+  
+app/controllers/students_controller.rb:14:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:49:10 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsa", "EMAIL"=>"mohamedmohysd217@gmail.com", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.5ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HASHBYTES('SHA2_512', asdasdasd),'mohamedmohysd217@gmail.com','2017-11-16');[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.1ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'SHA2_512', asdasdasd),'mohamedmohysd217@gmail.com','2017-11-16')' at line 2: INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsa','HASHBYTES('SHA2_512', asdasdasd),'mohamedmohysd217@gmail.com','2017-11-16');):
+  
+app/controllers/students_controller.rb:14:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:55:52 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsaasd", "EMAIL"=>"mohamedmsdaohysd217@gmail.comasd", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsaasd','12345678,'mohamedmsdaohysd217@gmail.comasd','2017-11-16');[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 2.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'mohamedmsdaohysd217@gmail.comasd','2017-11-16')' at line 2: INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsaasd','12345678,'mohamedmsdaohysd217@gmail.comasd','2017-11-16');):
+  
+app/controllers/students_controller.rb:15:in `create'
+Started POST "/students" for 127.0.0.1 at 2017-11-16 21:57:57 +0200
+Processing by StudentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PXl3Pnjq/WdGnbyIRX/XmDNNEk5MIukXe9wFfpBlRoEKb7oCS4yb1QHAaSnNWajjz20ZqpZkDSspZ4qLuqSUHw==", "student"=>{"USERNAME"=>"adsdsaasd", "EMAIL"=>"mohamedmsdaohysd217@gmail.comasd", "PASSWORD"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (85.5ms)[0m  [1m[32mINSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+        ('adsdsaasd','12345678','mohamedmsdaohysd217@gmail.comasd','2017-11-16');[0m
+Redirected to http://localhost:3001/students
+Completed 302 Found in 104ms (ActiveRecord: 86.5ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 21:57:58 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 21:59:05 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 21:59:06 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+Completed 200 OK in 34ms (Views: 31.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-16 21:59:07 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 36.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-16 21:59:07 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-17 00:07:15 +0200
+  [1m[35m (28.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by CoursesController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 740ms (Views: 715.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-17 00:11:34 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 42.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/departments" for 127.0.0.1 at 2017-11-17 00:11:35 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 62.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-17 00:11:35 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 61ms (Views: 58.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-17 00:11:36 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation.html.erb (0.8ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2017-11-17 00:11:37 +0200
+Processing by CoursesController#new as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (97.1ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 283ms (Views: 132.8ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/departments" for 127.0.0.1 at 2017-11-17 00:11:41 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 36.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/departments/new" for 127.0.0.1 at 2017-11-17 00:11:42 +0200
+Processing by DepartmentsController#new as HTML
+  Rendering departments/new.html.erb within layouts/application
+  Rendered departments/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 240ms (Views: 48.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/departments" for 127.0.0.1 at 2017-11-17 00:11:52 +0200
+Processing by DepartmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sjvJEzckEVRdgNxtWPl99yT6D6KKY10Z0xxN7oAl/R0KnzQnrWXCxvO/eM0GhPKU2zg8uVVutTqQnpyOoZRKDQ==", "department"=>{"DEPARTMENT_NAME"=>"compucom", "DEPARTMENT_DESC"=>"zbala"}, "commit"=>"Confirm"}
+  [1m[35m (79.8ms)[0m  [1m[32mINSERT INTO departments (DEPARTMENT_NAME,DEPARTMENT_DESC) VALUES 
+      ('compucom','zbala');[0m
+Redirected to http://localhost:3001/
+Completed 302 Found in 83ms (ActiveRecord: 79.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-11-17 00:11:52 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/courses" for 127.0.0.1 at 2017-11-17 00:11:54 +0200
+Processing by CoursesController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM courses[0m
+  Rendering courses/index.html.erb within layouts/application
+  Rendered courses/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2017-11-17 00:11:56 +0200
+Processing by CoursesController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/departments" for 127.0.0.1 at 2017-11-17 00:12:23 +0200
+Processing by DepartmentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering departments/index.html.erb within layouts/application
+  Rendered departments/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_navigation.html.erb (0.6ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-17 00:12:24 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 35.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/1%2F2017-11-15%2F1%2Fmohamed%2Fmohamedmohy217@gmail.com%2F1234567" for 127.0.0.1 at 2017-11-17 00:12:27 +0200
+Processing by StudentsController#show as 
+  Parameters: {"id"=>"1/2017-11-15/1/mohamed/mohamedmohy217@gmail"}
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 113ms (Views: 47.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/students/change_dep_id?foo_param=3&stud_param=1" for 127.0.0.1 at 2017-11-17 00:12:30 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"3", "stud_param"=>"1"}
+  [1m[36mDepartment Load (0.3ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 3 LIMIT 1[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 1 LIMIT 1[0m
+  [1m[35m (73.6ms)[0m  [1m[33mUPDATE students SET Department_ID = 3 WHERE STUDENT_ID = '1';[0m
+Redirected to http://localhost:3001/students
+Completed 302 Found in 79ms (ActiveRecord: 74.2ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-17 00:12:30 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/2%2F2017-11-15%2F%2Fnsaifiasbfiabsfi%2Fnsdfasdf@gmail.com%2F12345678" for 127.0.0.1 at 2017-11-17 00:12:33 +0200
+Processing by StudentsController#show as 
+  Parameters: {"id"=>"2/2017-11-15//nsaifiasbfiabsfi/nsdfasdf@gmail"}
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 2 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation.html.erb (0.5ms)
+Completed 200 OK in 46ms (Views: 38.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/students/change_dep_id?foo_param=3&stud_param=2" for 127.0.0.1 at 2017-11-17 00:12:35 +0200
+Processing by StudentsController#change_dep_id as HTML
+  Parameters: {"foo_param"=>"3", "stud_param"=>"2"}
+  [1m[36mDepartment Load (0.2ms)[0m  [1m[34mSELECT  `departments`.* FROM `departments` WHERE `departments`.`department_id` = 3 LIMIT 1[0m
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 2 LIMIT 1[0m
+  [1m[35m (59.3ms)[0m  [1m[33mUPDATE students SET Department_ID = 3 WHERE STUDENT_ID = '2';[0m
+Redirected to http://localhost:3001/students
+Completed 302 Found in 62ms (ActiveRecord: 59.8ms)
+
+
+Started GET "/students" for 127.0.0.1 at 2017-11-17 00:12:35 +0200
+Processing by StudentsController#index as HTML
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT * FROM students[0m
+  Rendering students/index.html.erb within layouts/application
+  Rendered students/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/students/2%2F2017-11-15%2F3%2Fnsaifiasbfiabsfi%2Fnsdfasdf@gmail.com%2F12345678" for 127.0.0.1 at 2017-11-17 00:12:36 +0200
+Processing by StudentsController#show as 
+  Parameters: {"id"=>"2/2017-11-15/3/nsaifiasbfiabsfi/nsdfasdf@gmail"}
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT  `students`.* FROM `students` WHERE `students`.`STUDENT_ID` = 2 LIMIT 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT * FROM departments[0m
+  Rendering students/show.html.erb within layouts/application
+  Rendered students/show.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navigation.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 38.2ms | ActiveRecord: 1.2ms)
+
+
