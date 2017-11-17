@@ -16,8 +16,11 @@ class CoursesController < ApplicationController
     end
 
     def index
+        @student = current_user
         query = "SELECT * FROM courses"
         @course= ActiveRecord::Base.connection.query(query)
+    end
+    def edit
     end
 
     def destroy

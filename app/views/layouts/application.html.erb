@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsApp</title>
-    <%= csrf_meta_tags %>
+
+<head>
+  <title>RailsApp</title>
+  <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-     <%= render 'layouts/navigation' %>
-     <br><br><br>
-     <div class="container">
-    <%= yield %>
-     </div>
-  </body>
+<body>
+  <%= render 'layouts/navigation' %>
+  <%= notice %>   
+
+    
+      <br>
+      <br>
+      <br>
+      <div class="container"></div>
+      <%= yield %>
+    </div>
+    
+</body>
+
 </html>

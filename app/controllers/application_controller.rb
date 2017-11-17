@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   private
   
   def current_user
-    @current_user ||= Student.find(session[:STUDENT_ID]) if session[:STUDENT_ID]
+    @current_user ||= Student.find_by_STUDENT_ID(session[:STUDENT_ID]) if session[:STUDENT_ID]
   end
 
   def logged_in?

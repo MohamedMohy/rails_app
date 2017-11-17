@@ -8,22 +8,33 @@ class StudentsController < ApplicationController
         connection = ActiveRecord::Base.connection
         @student =Student.new(student_params)
         @student.REGDATE = Time.now
+        
         yallashoot = Digest::MD5.hexdigest(@student.PASSWORD)
-        puts yallashoot
-        query ="INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
-        ('#{@student.USERNAME}','#{@student.PASSWORD}','#{@student.EMAIL}','#{@student.REGDATE}');"
-        #begin
-            connection.execute(query)
-       # rescue => exception
-            #redirect_to action: "index"
-            flash[:notice] = "Duplicate USERNAME or EMAIL !!"
-       # end
-        redirect_to action: "index"
+        if(@student.USERNAME != "" && @student.EMAIL!="" && @student.PASSWORD!="")
+            query ="INSERT INTO students (USERNAME,PASSWORD,EMAIL,REGDATE) VALUES 
+            ('#{@student.USERNAME}','#{yallashoot}','#{@student.EMAIL}','#{@student.REGDATE}');"
+            begin
+                connection.execute(query)
+                @id = ActiveRecord::Base.connection.query('SELECT STUDENT_ID FROM students ORDER BY STUDENT_ID DESC LIMIT 1;')
+                session[:STUDENT_ID]= @id
+                redirect_to :action => :show, :id => @id
+            rescue => exception
+                flash[:notice] = "Duplicate USERNAME or EMAIL !!"
+                render 'new'
+            end
+        else
+            flash[:notice] = "Blank fields are not allowed!!"
+            render 'new'
+        end
+
+       
     end
 
     def show 
         query = 'SELECT * FROM departments'
         @departments = ActiveRecord::Base.connection.query(query)
+        query = 'SELECT * FROM courses'
+        @courses = ActiveRecord::Base.connection.query(query)
     end
 
     def change_dep_id
@@ -32,7 +43,7 @@ class StudentsController < ApplicationController
         connection = ActiveRecord::Base.connection
         query="UPDATE students SET Department_ID = #{params[:foo_param]} WHERE STUDENT_ID = '#{params[:stud_param]}';"
         connection.execute(query)
-        redirect_to action: "index"
+        redirect_to courses_url
     end 
 
     def update 

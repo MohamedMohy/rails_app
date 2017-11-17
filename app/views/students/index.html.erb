@@ -11,13 +11,12 @@
                 <%= truncate(student[4],length:100) %>
             </div>
             <div class="article-actions">
-                <%= link_to 'Edit this student', edit_student_path(student) ,class:"btn btn-xs btn-primary" %> |
-                    <%= link_to 'Delete this student',student_path(student),method: :delete,
+                <%= link_to 'Delete this student',student_path(student),method: :delete,
                            data: { confirm: "Are you sure ?"},class:"btn btn-xs btn-danger"  %>
             </div>
         </div>
     </div>
-    <br> 
+    <br>
 
     <% end %>
 

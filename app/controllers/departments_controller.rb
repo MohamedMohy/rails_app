@@ -14,6 +14,7 @@ class DepartmentsController < ApplicationController
   end
 
   def index
+      @student = current_user
       query = "SELECT * FROM departments"
       @departments= ActiveRecord::Base.connection.query(query)
       

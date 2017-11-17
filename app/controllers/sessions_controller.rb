@@ -2,7 +2,10 @@ class SessionsController < ApplicationController
   def new
   end
   def create
-    student = Student.authenticate(params[:USERNAME], params[:PASSWORD])
+    yallashoot= Digest::MD5.hexdigest(params[:PASSWORD])
+    puts yallashoot
+    puts params[:PASSWORD]
+    student = Student.authenticate(params[:USERNAME], yallashoot)
     if student
       session[:STUDENT_ID] = student.STUDENT_ID
       flash[:sucess]="you logged in"

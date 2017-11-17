@@ -43,9 +43,11 @@
                                     <span class="caret"></span>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <% @departments.each do |s| %>
+                                    <% @courses.each do |s| %>
                                         <li>
-                                            <%=link_to "#{s[1]}", change_dep_id_path(foo_param: s[0],stud_param: @student.STUDENT_ID) %>
+                                            <% if s[5] == @student.Department_ID%>
+                                                <%=s[1]%>
+                                                    <%end%>
                                         </li>
                                         <% end %>
                                 </ul>
